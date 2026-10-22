@@ -1,0 +1,7 @@
+GROQ_API_KEY=replace-with-your-key
+RATE_SALT=replace-with-a-long-random-string
+APP_ORIGIN=http://localhost:5173
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+STRIPE_PRICE_PLUS=
+STRIPE_PRICE_PRO=

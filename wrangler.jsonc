@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imageshrink-ai",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-10-14",
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  },
+  "vars": {
+    "VISION_MODEL": "qwen/qwen3.8-27b",
+    "TEXT_MODEL": "openai/gpt-oss-20b"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "imageshrink",
+      "database_id": "local-dev-imageshrink",
+      "migrations_dir": "worker/migrations"
+    }
+  ]
+}

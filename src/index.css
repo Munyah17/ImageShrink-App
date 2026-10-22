@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #edf4ff;
+  --color-muted: #8ea0b8;
+  --color-line: #1c3b5c;
+  --color-paper: #061018;
+  --color-card: #0b1a2c;
+  --color-panel: #0e2034;
+  --color-accent: #2ee6a8;
+  --color-accent-dark: #12c48a;
+  --color-accent-soft: #113528;
+  --color-cyan: #2ad4e8;
+  --color-danger: #f87171;
+  --color-warn: #fbbf24;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(42, 212, 232, 0.08), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(46, 230, 168, 0.06), transparent 50%),
+    var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(46, 230, 168, 0.28);
+}
+
+main article a,
+main section a,
+footer a {
+  color: var(--color-accent);
+  text-underline-offset: 2px;
+}
+
+input[type="range"].accent-bar {
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2ad4e8, #2ee6a8);
+}
+
+input[type="range"].accent-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #2ee6a8;
+  box-shadow: 0 0 0 4px rgba(46, 230, 168, 0.15);
+}
+
+.optimize-btn {
+  background: linear-gradient(90deg, #2ad4e8 0%, #2ee6a8 100%);
+  color: #042016;
+  box-shadow: 0 10px 30px rgba(46, 230, 168, 0.18);
+}
+
+.optimize-btn:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
